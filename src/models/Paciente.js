@@ -1,6 +1,6 @@
 
-const { DataTypes } = require('sequelize');
-const sequelize = require('../controllers/PacienteController'); 
+import sequelize from '../db';
+import { DataTypes } from 'sequelize';
 
 const Paciente = sequelize.define('Paciente', {
   nome_completo: {
@@ -29,4 +29,4 @@ const Paciente = sequelize.define('Paciente', {
   },
 });
 
-module.exports = Paciente;
+export default Paciente;
